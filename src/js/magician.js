@@ -4,5 +4,6 @@ export default class Magician extends Mathh {
   constructor() {
     super();
     this.defaultAttack = 100;
+    this.defaulstone = false;
   }
 }

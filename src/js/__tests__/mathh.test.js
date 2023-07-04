@@ -3,29 +3,23 @@ import Mathh from '../mathh';
 const mathh = new Mathh();
 
 test('should set setstone', () => {
-  mathh.setstone = true;
+  mathh.stone = true;
 
-  expect(mathh.stone).toBe(true);
-});
-
-test('should set attack', () => {
-  mathh.attack = 2;
-
-  expect(mathh.distance).toBe(2);
+  expect(mathh._stone).toBe(true);
 });
 
 test('should get attack stone=false', () => {
-  mathh.defaultAttack = 100;
-  mathh.setstone = false;
-  mathh.attack = 2;
+  mathh.stone = false;
+  mathh.attack = 100;
+  mathh.distance = 2;
 
   expect(mathh.attack).toBe(90);
 });
 
 test('should get attack stone=true', () => {
-  mathh.defaultAttack = 100;
-  mathh.setstone = true;
-  mathh.attack = 2;
+  mathh.stone = true;
+  mathh.attack = 100;
+  mathh.distance = 2;
 
   expect(mathh.attack).toBe(85);
 });

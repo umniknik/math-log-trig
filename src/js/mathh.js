@@ -4,12 +4,24 @@ export default class Mathh {
     this.stone = false;
   }
 
-  set setstone(value) {
-    this.stone = value;
+  set stone(value) {
+    this._stone = value;
+  }
+
+  get stone() {
+    return this._stone;
+  }
+
+  set distance(value) {
+    this._distance = value;
+  }
+
+  get distance() {
+    return this._distance;
   }
 
   set attack(value) {
-    this.distance = value;
+    this.defaultAttack = value;
   }
 
   get attack() {
